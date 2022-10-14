@@ -1,0 +1,126 @@
+.main-drop-container {
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../supplies/undraw_city_life_gnpr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.drop-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    border: 3px dashed #000;
+    border-radius: 10px;
+    padding: 150px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.800);
+}
+
+.drop-container p {
+    margin: 20px;
+}
+
+.drop-container:hover {
+    cursor: pointer;
+}
+
+.drop-container aside {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.accepted-files {
+    color: #fff;
+    margin: 20px;
+    background-color: rgba(31, 80, 255, 0.750);
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: all ease-in-out .2s;
+}
+
+.accepted-files:hover {
+    background-color: rgb(31, 80, 255);
+    transition: all ease-in-out .2s;
+}
+
+.rejected-files {
+    color: #fff;
+    margin: 20px;
+    background-color: rgb(234, 51, 127, 0.750);
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: all ease-in-out .2s;
+}
+
+.rejected-files:hover {
+    background-color: rgb(234, 51, 127);
+    transition: all ease-in-out .2s;
+}
+
+@media (max-width: 968px) {
+    .drop-container {
+        height: 50%;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .drop-container p {
+        font-size: 10px;
+        width: 300px;
+    }
+    .drop-container em {
+        font-size: 10px;
+        width: 300px;
+    }
+    .drop-container aside {
+        margin: 5px;
+        font-size: 10px;
+    }
+    .accepted-files {
+        width: 100px;
+    }
+    .rejected-files {
+        width: 100px;
+    }
+}
+
+@media (max-height: 00px) {
+    .drop-container {
+        height: 50%;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .drop-container p {
+        font-size: 10px;
+        width: 300px;
+    }
+    .drop-container em {
+        font-size: 10px;
+        width: 300px;
+    }
+    .drop-container aside {
+        margin: 5px;
+        font-size: 10px;
+    }
+    .accepted-files {
+        width: 100px;
+    }
+    .rejected-files {
+        width: 100px;
+    }
+}

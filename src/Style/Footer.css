@@ -1,0 +1,36 @@
+:root {
+    --main-color: rgb(31, 78, 255);
+}
+
+.f-container {
+    height: 25vh;
+    width: 100vw;
+    background-color: rgba(31, 80, 255, 0.898);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-container .f-icon {
+    font-size: 30px;
+    margin: 50px;
+    color: #fff;
+}
+
+.f-container div p {
+    color: #fff;
+}
+
+@media (max-width: 680px) {
+    .f-container {
+        height: 20vh;
+    }
+    .f-container .f-icon {
+        font-size: 20px;
+        margin: 20px;
+    }
+    .f-container div p {
+        font-size: 12px;
+    }
+}
