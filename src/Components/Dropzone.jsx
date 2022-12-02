@@ -17,8 +17,7 @@ function MyDropzone(props) {
     accept: {
       "text/csv": [".csv, text/csv"],
       "text/plain": [".csv", "text/plain"],
-      "application/vnd.ms-excel": [".csv"],
-    },
+      "application/vnd.ms-excel": [".csv"], },
   });
 
 
@@ -33,9 +32,9 @@ function MyDropzone(props) {
   };
 
   const files = myFiles.map((file) => (
-    <li key={file.path}>
+    <li key={file.path} style={{margin: "5px", fontWeight: "500"}}>
       {file.path}
-      <button onClick={removeFile(file)} style={{color: "red", marginLeft: "10px"}}>X</button>
+      <button onClick={removeFile(file)} style={{color: "red", marginLeft: "10px", padding: "2px", backgroundColor: "transparent", border: "0px", fontWeight: "600"}}>X</button>
     </li>
   ));
 
@@ -65,11 +64,13 @@ function MyDropzone(props) {
         <input {...getInputProps()} />
         <p>Drag 'n' drop some files here, or click to select files</p>
       </div>
-      <aside>
-        <ul style={{textDecoration: "None"}}>{files}</ul>
+      <aside style={{margin: "5px"}}>
+        <ul style={{listStyleType: "None", backgroundColor: "#fff", padding: "5px", border: "1px dashed #000", borderRadius: "10px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-end"}}>{files}</ul>
       </aside>
-      {files.length > 0 && <button onClick={removeAll}>Remove All</button>}
-      {files.length > 0 && <button onClick={uploadFiles}>Upload All</button>}
+      <div>
+        {files.length > 0 && <button className="rejected-files" onClick={removeAll}>Remove</button>}
+        {files.length > 0 && <button className="accepted-files" onClick={uploadFiles}>Upload</button>}
+      </div>
     </section>
   );
 }
